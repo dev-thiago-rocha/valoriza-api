@@ -6,3 +6,4 @@ export { CreateComplimentController } from './compliment/CreateComplimentControl
 export { ListComplimentUserSenderController } from './compliment/ListComplimentUserSenderController'
 export { ListComplimentUserReceiverController } from './compliment/ListComplimentUserReceiverController'
 export { ListUserController } from './user/ListUserController'
+export { UpdateNameUserController } from './user/UpdateNameUserController'

@@ -4,13 +4,12 @@ import { CustomError, VALIDATION_ERRORS } from '../../error'
 import { hash } from 'bcryptjs'
 
 interface CreateUserRequest {
-  name: string
   email: string
   password: string
 }
 
 class CreateUserService {
-  async execute({ name, email, password }: CreateUserRequest) {
+  async execute({ email, password }: CreateUserRequest) {
     if (!email) {
       throw new CustomError(VALIDATION_ERRORS.INCORRECT_EMAIL)
     }
@@ -25,14 +24,12 @@ class CreateUserService {
     const passwordHash = await hash(password, 8)
 
     const user = userRepository.create({
-      name,
       email,
       password: passwordHash,
       admin: false,
       deleted: false,
     })
     await userRepository.save(user)
-
     return user
   }
 }

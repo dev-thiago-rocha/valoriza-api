@@ -24,11 +24,11 @@ const VALIDATION_ERRORS = {
   },
   USER_ALREADY_EXISTS: {
     status: 400,
-    message: 'O usuário já existe em nosso banco de dados.',
+    message: 'Esse usuário já existe.',
   },
   USER_RECEIVER_DOES_NOT_EXISTS: {
     status: 400,
-    message: 'O usuário de destino não existe na nossa base de dados.',
+    message: 'O usuário de destino não existe não foi encontrado.',
   },
   USER_RECEIVER_EQUALS_USER_SENDER: {
     status: 400,
